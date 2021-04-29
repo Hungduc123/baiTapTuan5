@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Baitaptuan1</string>
+    <string name="skip">Skip</string>
+    <string name="fullName">Full Name</string>
+    <string name="email">E-mail</string>
+    <string name="phoneNumber">Phone Number</string>
+
+</resources>

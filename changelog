@@ -1,0 +1,13 @@
+changelog 31/03/2021:
+ Add circlebtn.xml, reactangle_switch, round_shape_btn.xml in drawable
+Create a new font folder
+Disable the action bar in theme
+Change login image to login image button
+Create a table row for input number verifcation edit text.
+Some changes in Edit Text. You may find out!
+
+
+changelog 1/04/2021:
+translucent status bar
+some update xml files
+
