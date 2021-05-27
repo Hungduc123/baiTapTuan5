@@ -1,3 +1,4 @@
+![Uploading baiTapTuan5.gif…]()
 THỬ THÁCH TUẦN 5
 
 1. Tạo work-flow app
