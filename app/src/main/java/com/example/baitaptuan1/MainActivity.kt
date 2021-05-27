@@ -10,14 +10,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-<<<<<<< Updated upstream
         supportActionBar?.hide()
-         supportFragmentManager.commit { setReorderingAllowed(true)
-=======
-         supportFragmentManager.commit {
-             setReorderingAllowed(true)
->>>>>>> Stashed changes
-         add<OnBoardingOneFragment>(R.id.frag_container_view)}
+        supportFragmentManager.commit { setReorderingAllowed(true)
+            add<OnBoardingOneFragment>(R.id.frag_container_view)}
 
 
 

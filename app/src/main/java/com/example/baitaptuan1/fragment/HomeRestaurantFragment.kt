@@ -1,10 +1,8 @@
 package com.example.baitaptuan1.fragment
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.baitaptuan1.ListRestaurantsActivity
@@ -32,6 +30,7 @@ class HomeRestaurantFragment : Fragment() {
     var restaurantList : ArrayList<Restaurant> = ArrayList()
     private lateinit var binding: FragmentHomeRestaurantBinding
     private var layoutManager: GridLayoutManager? = null
+    lateinit var fav: MenuItem
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,6 +51,7 @@ class HomeRestaurantFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
 
         try {
             val obj = JSONObject((activity as ListRestaurantsActivity).getJSONFromAssets())
@@ -76,4 +76,41 @@ class HomeRestaurantFragment : Fragment() {
         }
 
     }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+        val newId = 100
+        fav  = menu.add(0, newId, 0, "Grid")
+        fav.setIcon(R.drawable.icongrid);
+        fav.setShowAsAction (MenuItem.SHOW_AS_ACTION_ALWAYS)
+
+
+
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when (item?.itemId) {
+            100-> {
+                if (layoutManager?.spanCount == 1) {
+                    layoutManager?.spanCount = 3
+                    item.title = "list"
+//                    item.icon = context?.let { getDrawable(it,R.drawable.listicon) }
+                    fav.setIcon(R.drawable.listicon);
+
+//                            list.setImageDrawable();
+                } else {
+                    layoutManager?.spanCount = 1
+                    item.title = "grid"
+//                        item.icon=  icongrid
+//                   item.icon = context?.let { getDrawable(it,R.drawable.icongrid) }
+                    fav.setIcon(R.drawable.icongrid);
+
+                }
+                homerec.adapter?.notifyItemRangeChanged(0, homerec.adapter?.itemCount ?: 0)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 }

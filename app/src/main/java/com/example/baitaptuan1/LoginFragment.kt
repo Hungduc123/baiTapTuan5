@@ -1,6 +1,5 @@
 package com.example.baitaptuan1
 
-import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -10,7 +9,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.baitaptuan1.fragment.SignUpFragment
+import com.example.baitaptuan1.fragment.WelcomeFragment
+import com.example.baitaptuan1.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -43,7 +46,7 @@ class LoginFragment : Fragment() {
              etPasswordSignUp.setError("Enter your password, Please!!!");
          }
 
-         context?.let { it1 -> loginViewModel.getLoginDetails(it1, email, password) }!!.observe(this, Observer {
+         context?.let { it1 -> loginViewModel.getLoginDetails(it1, email, password) }!!.observe(viewLifecycleOwner, Observer {
              if (it == null) {
                  Toast.makeText(context, "Not found", Toast.LENGTH_LONG).show()
              } else {
