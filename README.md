@@ -1,4 +1,8 @@
-![Uploading baiTapTuan5.gif…]()
+![baiTapTuan5](https://user-images.githubusercontent.com/75669379/119794149-7a243d80-bf01-11eb-9619-22ed116cdfe7.gif)
+
+
+
+
 THỬ THÁCH TUẦN 5
 
 1. Tạo work-flow app
