@@ -24,7 +24,7 @@ class FavRestaurantFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
+
 
         favoriteLists = ListRestaurantsActivity.favoriteDatabase!!.favoriteDao()!!.getFavoriteData() as List<FavoriteList>
 
