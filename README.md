@@ -32,4 +32,8 @@ source code trên github
 hình ảnh, file gif hoặc video tương ứng. Licecap để tạo ảnh gif
 đia chỉ email: nam.phho@gmail.com
 Tiêu đề email đặt theo format sau: [Android-K17][week-number][nhóm]
+<<<<<<< Updated upstream
 [Android-K17][week2][Nhóm-1]
+=======
+[Android-K17][week2][Nhóm-1]
+>>>>>>> Stashed changes
